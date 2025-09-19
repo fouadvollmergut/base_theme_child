@@ -1,0 +1,259 @@
+:root {
+  // Colors
+  --standard-white: #ffffff;
+  --standard-off-white: #f3f3f3;
+
+  --standard-black: #000000;
+  --standard-off-black: #171717;
+
+  --base-color: #496DDB;
+  --base-color-rgb: 73, 109, 219;
+  --base-color-light: #DCE3FA;
+  --base-color-light-rgb: 220, 227, 250;
+  --base-color-dark: #2C4AAC;
+  --base-color-dark-rgb: 44, 74, 172;
+
+  --base-color-background-light: #CAD5F3;
+  --base-color-background-light-rgb: 202, 213, 243;
+  --base-color-background-dark: #2A3D91;
+  --base-color-background-dark-rgb: 42, 61, 145;
+
+  --accent-color: #C95D63;
+  --accent-color-rgb: 201, 93, 99;
+  --accent-color-light: #F4D7D9;
+  --accent-color-light-rgb: 244, 215, 217;
+  --accent-color-dark: #9B3D43;
+  --accent-color-dark-rgb: 155, 61, 67;
+  --accent-color-darker: #803338;
+  --accent-color-darker-rgb: 128, 51, 56;
+
+  --text-color-dark: #171717;
+  --text-color-dark-rgb: 23, 23, 23;
+  --text-color-light: #ffffff;
+  --text-color-light-rgb: 255, 255, 255;
+  --text-color-accent: #F4D7D9;
+  --text-color-accent-rgb: 244, 215, 217;
+
+  --mainmenu-background-color: #496DDB;
+  --mainmenu-background-color-rgb: 73, 109, 219;
+  --mainmenu-background-color-hover: #2C4AAC;
+  --mainmenu-background-color-hover-rgb: 44, 74, 172;
+
+  --submenu-background-color: #2C4AAC;
+  --submenu-background-color-rgb: 73, 109, 219;
+  --submenu-background-color-hover: #2A3D91;
+  --submenu-background-color-hover-rgb: 42, 61, 145;
+
+  --mainmenu-text-color: #f3f3f3;
+  --mainmenu-text-color-rgb: 243, 243, 243;
+  --mainmenu-text-color-accent: #ffffff;
+  --mainmenu-text-color-accent-rgb: 255, 255, 255;
+  
+  --submenu-text-color: #f3f3f3;
+  --submenu-text-color-rgb: 243, 243, 243;
+  --submenu-text-color-accent: #ffffff;
+  --submenu-text-color-accent-rgb: 255, 255, 255;
+
+  --footer-background-color: #496DDB;
+  --footer-background-color-rgb: 73, 109, 219;
+  --footer-background-color-accent: #f3f3f3;
+  --footer-background-color-accent-rgb: 243, 243, 243;
+
+  --footer-text-color: #2C4AAC;
+  --footer-text-color-rgb: 44, 74, 172;
+  --footer-text-color-accent: #ffffff;
+  --footer-text-color-accent-rgb: 255, 255, 255;
+  
+  --error-color: #da1e28;
+  --error-color-rgb: 218, 30, 40;
+}
+
+.background {
+  &-neutral {
+    background-color: var(--standard-off-white);
+
+    .gdymc_text {
+      a {
+        background: linear-gradient(to right, rgba(var(--base-color-rgb), .5), rgba(var(--base-color-rgb), .5));
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 0% 2px;
+      }
+
+      ul, ol {
+        li::marker {
+          color: var(--text-color-dark);
+        }
+      }
+    }
+
+    .gdymc_moduleinner {
+      h1, h2, h3, h4, h5, h6, p, span, q, a,
+      .h1, .h2, .h3, .h4, .h5, .h6, .p, .span, .q,
+      .gdymc_text, 
+      .gdymc_text > *,
+      div {
+        color: var(--text-color-dark);
+      }
+
+      .button {
+        background-color: var(--base-color);
+        color: var(--text-color-light);
+
+        &:hover {
+          background-color: var(--base-color-dark);
+        }
+
+        &.button-primary {
+          background-color: var(--accent-color);
+          color: var(--text-color-light);
+
+          &:hover {
+            background-color: var(--accent-color-dark);
+          }
+        }
+      }
+    }
+  }
+
+  &-light {
+    background-color: var(--base-color-background-light);
+
+    .gdymc_text {
+      a {
+        background: linear-gradient(to right, var(--base-color-dark), var(--base-color-dark));
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 0% 2px;
+      }
+
+      ul, ol {
+        li::marker {
+          color: var(--base-color-dark);
+        }
+      }
+    }
+
+    .gdymc_moduleinner {
+      h1, h2, h3, h4, h5, h6, p, span, q, a,
+      .h1, .h2, .h3, .h4, .h5, .h6, .p, .span, .q,
+      .gdymc_text, 
+      .gdymc_text > *,
+      div {
+        color: var(--text-color-dark);
+      }
+
+      .button {
+        background-color: var(--base-color);
+        color: var(--text-color-light);
+
+        &:hover {
+          background-color: var(--base-color-dark);
+        }
+
+        &.button-primary {
+          background-color: var(--accent-color);
+          color: var(--text-color-light);
+
+          &:hover {
+            background-color: var(--accent-color-dark);
+          }
+        }
+      }
+    }
+  }
+
+  &-dark {
+    background-color: var(--base-color-background-dark);
+
+    .gdymc_text {
+      a {
+        background: linear-gradient(to right, var(--base-color), var(--base-color));
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 0% 2px;
+      }
+
+      ul, ol {
+        li::marker {
+          color: var(--base-color);
+        }
+      }
+    }
+
+    .gdymc_moduleinner {
+      h1, h2, h3, h4, h5, h6, p, span, q, a,
+      .h1, .h2, .h3, .h4, .h5, .h6, .p, .span, .q,
+      .gdymc_text,
+      .gdymc_text > *,
+      div {
+        color: var(--text-color-light);
+      }
+
+      .button {
+        background-color: var(--base-color);
+        color: var(--text-color-light);
+
+        &:hover {
+          background-color: var(--base-color-dark);
+        }
+
+        &.button-primary {
+          background-color: var(--accent-color);
+          color: var(--text-color-light);
+
+          &:hover {
+            background-color: var(--accent-color-dark);
+          }
+        }
+      }
+    }
+  }
+
+  &-accent {
+    background-color: var(--accent-color);
+
+    .gdymc_text {
+      a {
+        background: linear-gradient(to right, var(--accent-color-dark), var(--accent-color-dark));
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 0% 2px;
+      }
+
+      ul, ol {
+        li::marker {
+          color: var(--accent-color-dark);
+        }
+      }
+    }
+
+    .gdymc_moduleinner {
+      h1, h2, h3, h4, h5, h6, p, span, q, a,
+      .h1, .h2, .h3, .h4, .h5, .h6, .p, .span, .q,
+      .gdymc_text, 
+      .gdymc_text > *,
+      div {
+        color: var(--text-color-light);
+      }
+
+      .button {
+        background-color: var(--base-color);
+        color: var(--text-color-light);
+
+        &:hover {
+          background-color: var(--base-color-dark);
+        }
+
+        &.button-primary {
+          background-color: var(--accent-color-dark);
+          color: var(--text-color-light);
+
+          &:hover {
+            background-color: var(--accent-color-darker);
+          }
+        }
+      }
+    }
+  }
+}
